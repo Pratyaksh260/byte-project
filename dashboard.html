@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard</title>
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+<div class="container">
+  <div class="upclass">
+    <img src="byte-transparent-logo.png" alt="Logo" class="logo" />
+    <h1>Dashboard</h1>
+  </div>
+    <div class="user-info">
+        <h2>User Information</h2>
+        <div id="userInfo" class="user-details">
+            
+        </div>
+    </div>
+    <div class="poem-section">
+        <h2>Poems</h2>
+        <div id="poemList" class="poem-list">
+            
+        </div>
+        <div class="poem-form">
+            <label for="poem">Poem:</label>
+            <textarea id="poem" name="poem" rows="10" cols="50" required></textarea>
+            <br /><br />
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required />
+            <br /><br />
+
+            <input type="submit" value="Submit" id="submitBtn" />
+        </div>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121927;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    color: #22c55e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info,
+.poem-section {
+    background-color: rgb(225,225,225,0.1);
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+h2 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+.user-details {
+    margin-bottom: 20px;
+}
+
+.poem-list {
+    margin-bottom: 20px;
+    max-height: 300px; 
+    overflow-y: auto;
+    padding: 10px; 
+padding-left: 0px;}
+   
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #22c55e;
+    background-color: #121927;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #d00858;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6b9c;
+}
+
+
+.upclass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 10px; }
