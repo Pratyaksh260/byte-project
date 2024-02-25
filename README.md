@@ -1,1 +1,1 @@
-# byte-project
+Please open home.html for homepage
