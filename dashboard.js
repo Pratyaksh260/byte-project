@@ -1,5 +1,3 @@
-
-
 const token = localStorage.getItem("token");
 console.log("Token:", token);
 
@@ -26,6 +24,7 @@ fetch("http://panel.mait.ac.in:8001/auth/user-details/", {
   });
 
 
+
 function fetchPoems() {
   fetch("http://panel.mait.ac.in:8001/poem/get/", {
     method: "GET",
@@ -41,11 +40,20 @@ function fetchPoems() {
     })
     .then((data) => {
       const poemList = document.getElementById("poemList");
-      poemList.innerHTML = "";
+      poemList.innerHTML = ""; // Clear existing poems
+      
       if (Array.isArray(data)) {
         data.forEach((poem) => {
           const poemItem = document.createElement("div");
-          poemItem.textContent = `${poem.poem} - ${poem.author}`;
+          const poemText = document.createElement("div");
+          const authorText = document.createElement("div");
+
+          poemItem.classList.add("poemItem");
+          poemText.innerHTML = poem.poem.replace(/\n/g, "<br>");
+          authorText.textContent = poem.author;
+
+          poemItem.appendChild(poemText);
+          poemItem.appendChild(authorText);
 
           poemList.appendChild(poemItem);
         });
@@ -55,7 +63,6 @@ function fetchPoems() {
       console.error("Error fetching poems:", error);
     });
 }
-
 
 document.getElementById("submitBtn").addEventListener("click", function () {
   const poem = document.getElementById("poem").value;
@@ -81,6 +88,5 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       console.error("Error submitting poem:", error);
     });
 });
-
 
 fetchPoems();
