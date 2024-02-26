@@ -91,3 +91,46 @@ input[type="submit"]:hover {
 
 .logo {
     margin-bottom: 10px; }
+
+
+
+    
+    #poemList {
+        display: flex; 
+        flex-wrap: wrap; 
+        scrollbar-width: thin; 
+        scrollbar-color: #22c55e #272d3a; 
+        overflow-x: hidden; 
+      }
+      
+      #poemList::-webkit-scrollbar {
+        width: 1px;
+        
+      }
+      
+      #poemList::-webkit-scrollbar-track {
+        background: #121927; 
+      }
+      
+      #poemList::-webkit-scrollbar-thumb {
+        background-color: #22c55e; 
+        border-radius: 50%; 
+      }
+      
+      
+
+        
+    .poemItem {
+        flex: 0 0 auto;
+        background-color: #39414f; 
+        color: white;
+        padding: 10px; 
+        margin: 5px;
+        border-radius: 8px;
+      }
+      
+      .poemItem div:not(:last-child) {
+        margin-bottom: 5px; 
+      }
+      
+      
